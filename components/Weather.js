@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, ImageBackground, StyleSheet, place } from 'react-native'
 import Forecast from './Forecast';
 import Constants from 'expo-constants';
+import DateTime from './DateTime';
 
 export default function Weather(props) {
     useEffect(() => {
@@ -33,14 +34,12 @@ export default function Weather(props) {
         <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>
         <View style={styles.highlight}>
             <View>
+                
                 <View style={styles.container}>
                     <Text style={styles.place}>{props.place}</Text>
                 </View>
-                <View >
-                <Text>{props.line}</Text>
-                    <Text style={styles.time}>23.00</Text>
-                    <Text style={styles.date}>Monday, June 7</Text>
-                
+                <View>
+                    <DateTime />
                 </View>
                 <View >
                     <Text>{props.line}</Text>
@@ -76,19 +75,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: '300'
     },
-
-    time: {
-        fontSize: 45,
-        color: 'white',
-        fontWeight: '300'
-    },
-
-    date: {
-        fontSize: 25,
-        color: 'white',
-        fontWeight: '300'
-    },
-
     section: {
         flex: 1.5,
         flexDirection: 'row',
@@ -108,5 +94,12 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         marginTop: 10
+    },
+
+    am: {
+        fontSize: 30,
+        color: 'white',
+        fontWeight: '300',
+        textAlign: 'center'
     }
 });

@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, StatusBar, StyleSheet, Text, View } from "react-native";
+import { FlatList, StatusBar, StyleSheet, Text, View, ImageBackground } from "react-native";
 import { TouchableHighlight } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
 
@@ -27,6 +27,7 @@ const _keyExtractor = item => item.code
 export default function ZipCodeScreen(){
     const navigation = useNavigation()
     return (
+        
         <View>
         <FlatList
             data={availableZipItems}
@@ -35,6 +36,7 @@ export default function ZipCodeScreen(){
             />
             <StatusBar style="auto" />
         </View>
+    
     ); 
 }
 
@@ -42,12 +44,13 @@ const styles = StyleSheet.create({
     zipItem: {
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
     zipPlace: {
         flex: 1,
     },
     zipCode: {
         flex: 1,
-    }
+    },
+    
 })
