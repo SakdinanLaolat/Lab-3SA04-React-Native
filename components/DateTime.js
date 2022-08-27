@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { View } from "react-native";
 
 const DateTime =() => {
+    const [date, setDate] = useState('');
     return (
-        <View>
-            Hi
-        </View>
+       <View></View>
     )
 }

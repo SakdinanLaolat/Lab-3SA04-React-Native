@@ -4,10 +4,10 @@ import { Text, View, StyleSheet } from 'react-native'
 export default function Forecast(props) {
     return (
         <View >
-            <Text style={style.normalText}>{props.line}</Text>
+            <Text>{props.line}</Text>
             <Text style={style.Text}>main</Text>
             <Text style={style.normalText}>{props.main}</Text>
-            <Text style={style.normalText}>{props.line}</Text>
+            <Text>{props.line}</Text>
             <Text style={style.desText}>description</Text>
             <Text style={style.normalText}>{props.description}</Text>
             <View style= {{
